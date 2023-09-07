@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour
         if (hit.collider == null)
             return;
 
-        Debug.Log("We Hit the Carrot!!");
+        Debug.Log("We Hit the Narwhal!!");
         onCarrotClicked?.Invoke();
     }
 }

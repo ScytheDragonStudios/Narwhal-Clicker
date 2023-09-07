@@ -50,17 +50,17 @@ public class CarrotManager : MonoBehaviour
 
     private void UpdateCarrotsText()
     {
-        carrotsText.text = totalCarrotsCount + " Carrots!";
+        carrotsText.text = totalCarrotsCount + " Narwhals!";
     }
 
     private void SaveData()
     {
-        PlayerPrefs.SetString("Carrots", totalCarrotsCount.ToString());
+        PlayerPrefs.SetString("Narwhals", totalCarrotsCount.ToString());
     }
 
     private void LoadData()
     {
-        double.TryParse(PlayerPrefs.GetString("Carrots"), out totalCarrotsCount);
+        double.TryParse(PlayerPrefs.GetString("Narwhals"), out totalCarrotsCount);
 
         UpdateCarrotsText();
     }

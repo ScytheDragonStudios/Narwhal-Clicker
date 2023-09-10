@@ -8,6 +8,7 @@ public class InputManager : MonoBehaviour
 
     [Header(" Action ")]
     public static Action onCarrotClicked;
+    public static Action<Vector2> onCarrotClickedPosition;
 
 
     // Start is called before the first frame update
@@ -32,5 +33,7 @@ public class InputManager : MonoBehaviour
 
         Debug.Log("We Hit the Narwhal!!");
         onCarrotClicked?.Invoke();
+
+        onCarrotClickedPosition?.Invoke(hit.point);
     }
 }

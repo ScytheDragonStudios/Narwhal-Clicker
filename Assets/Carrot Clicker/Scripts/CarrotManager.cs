@@ -6,6 +6,9 @@ using System.Runtime.CompilerServices;
 
 public class CarrotManager : MonoBehaviour
 {
+    public static CarrotManager instance;
+
+
     [Header(" Elements ")]
     [SerializeField] private TextMeshProUGUI carrotsText;
 
@@ -17,6 +20,11 @@ public class CarrotManager : MonoBehaviour
 
     private void Awake()
     {
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         LoadData();
 
         carrotIncrement = 1;
@@ -47,6 +55,15 @@ public class CarrotManager : MonoBehaviour
         
     }
 
+    public void AddNarwhals(float value)
+    {
+        totalCarrotsCount += value;
+
+        UpdateCarrotsText();
+
+        SaveData();
+    }
+
     private void CarrotClickedCallback()
     {
         totalCarrotsCount += carrotIncrement;
@@ -59,7 +76,7 @@ public class CarrotManager : MonoBehaviour
 
     private void UpdateCarrotsText()
     {
-        carrotsText.text = totalCarrotsCount + " Narwhals!";
+        carrotsText.text = totalCarrotsCount.ToString("F0") + " Narwhals!";
     }
 
     private void FrenzyModeStartedCallback()

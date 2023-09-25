@@ -55,6 +55,26 @@ public class CarrotManager : MonoBehaviour
         
     }
 
+    public bool TryPurchase(double price)
+    {
+        if (price <= totalCarrotsCount)
+        {
+            totalCarrotsCount -= price;
+            return true;
+        }
+
+        return false;
+    }
+
+    public void AddNarwhals(double value)
+    {
+        totalCarrotsCount += value;
+
+        UpdateCarrotsText();
+
+        SaveData();
+    }
+
     public void AddNarwhals(float value)
     {
         totalCarrotsCount += value;

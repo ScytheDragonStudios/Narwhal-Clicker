@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 
 public class AutoClickManager : MonoBehaviour
@@ -44,7 +43,7 @@ public class AutoClickManager : MonoBehaviour
 
         SpawnStarfish();
 
-        StartAnimatingStarfish();
+        //StartAnimatingStarfish();
     }
 
     // Update is called once per frame
@@ -98,10 +97,10 @@ public class AutoClickManager : MonoBehaviour
 
         if (level <= 36)
             SpawnStarfish();
-        StartAnimatingStarfish();
+        //StartAnimatingStarfish();
     }
 
-    private void StartAnimatingStarfish()
+    /*private void StartAnimatingStarfish()
     {
         if (rotator.childCount <= 0)
             return;
@@ -113,12 +112,12 @@ public class AutoClickManager : MonoBehaviour
             LeanTween.cancel(rotator.GetChild(i).gameObject);
         }
 
-        LeanTween.moveLocalY(rotator.GetChild(currentStarfishIndex).GetChild(0).gameObject, -0.5f, .25f)
+        LeanTween.moveLocalY(rotator.GetChild(currentStarfishIndex).GetChild(0).gameObject, -0.1f, .125f)
             .setLoopPingPong(1)
             .setOnComplete(AnimateNextStarfish);
-    }
+    }*/
 
-    private void AnimateNextStarfish()
+   /* private void AnimateNextStarfish()
     {
         currentStarfishIndex++;
 
@@ -126,16 +125,16 @@ public class AutoClickManager : MonoBehaviour
             ResetStarfishAnimation();
         else
             StartAnimatingStarfish();
-    }
+    }*/
 
-    private void ResetStarfishAnimation()
+    /*private void ResetStarfishAnimation()
     {
         currentStarfishIndex = 0;
 
         float delay = Mathf.Max(10 - rotator.childCount, 0);
 
         LeanTween.delayedCall(gameObject, delay, StartAnimatingStarfish);
-    }
+    }*/
 
     private void LoadData()
     {

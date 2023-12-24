@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum UpgradeType
+{
+    Autoclick,
+    Tap,
+}
+
 [CreateAssetMenu(fileName ="Upgrade Data", menuName = "Scriptable Objects/Upgrade Data", order = 0)]
 public class UpgradeSO : ScriptableObject
 {
@@ -13,6 +19,9 @@ public class UpgradeSO : ScriptableObject
     public double cpsPerLevel;
     public double basePrice;
     public float coefficient;
+
+    [Header(" Upgrade Type ")]
+    public UpgradeType upgradeType;
 
     public double GetPrice(int level)
     {

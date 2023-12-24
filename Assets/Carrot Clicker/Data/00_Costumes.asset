@@ -9,12 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b1e1ee7f19b64045af9b48c5a0206a0, type: 3}
-  m_Name: 00_Upgrade_StarfishClicker
+  m_Script: {fileID: 11500000, guid: 935652e2ee194154982767bc63870702, type: 3}
+  m_Name: 00_Costumes
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  title: Clicker
-  cpsPerLevel: 1
-  basePrice: 150
-  coefficient: 1.07
-  upgradeType: 0

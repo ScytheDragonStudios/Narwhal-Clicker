@@ -34,4 +34,10 @@ public class UpgradeManager : MonoBehaviour
 
         CarrotManager.instance.AddNarwhals(totalNarwhals);
     }
+
+
+    private void AddClicks()
+    {
+
+    }
 }
